@@ -1,0 +1,15 @@
+.countryDetails{
+ box-shadow: 0px 5px 8px 9px rgba(0,0,0,0.3);
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ flex-direction: column;
+ margin:100px auto;
+ padding: 30px 20px;
+ width:50%
+
+}
+.country__flag{
+    height:150px;
+    object-fit: contain;
+}
