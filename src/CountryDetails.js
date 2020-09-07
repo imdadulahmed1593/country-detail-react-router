@@ -15,12 +15,14 @@ function CountryDetails() {
       .catch((error) => alert(error.message));
   }, []);
 
-  const { name, flag, region, subregion, population, currencies } = country;
+  const { name, flag, region, subregion, population } = country;
   //   currencies.map((cr) => {
   //     const { code, name, symbol } = cr;
   //     return cr;
   //   });
-  console.log(currencies);
+  const currency = country.currencies && country.currencies[0].name;
+  console.log(currency);
+
   return (
     <div className="countryDetails">
       <img className="country__flag" src={flag} alt="" />
@@ -28,8 +30,7 @@ function CountryDetails() {
       <h2>region: {region}</h2>
       <h2>subregion: {subregion}</h2>
       <h2>population: {population}</h2>
-      <h2>currency:</h2>
-      {console.log(currencies)}
+      <h2>currency: {currency}</h2>
     </div>
   );
 }
